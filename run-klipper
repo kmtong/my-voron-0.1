@@ -1,0 +1,10 @@
+#!/bin/sh
+
+PYTHONDIR="/opt/klippy-env"
+SRCDIR="/opt/klipper"
+HOMEDIR="/octoprint"
+KLIPPER_LOG="/octoprint/logs/klipper.log"
+
+mkdir -p /octoprint/logs
+
+${PYTHONDIR}/bin/python ${SRCDIR}/klippy/klippy.py ${HOMEDIR}/printer.cfg -l ${KLIPPER_LOG}
